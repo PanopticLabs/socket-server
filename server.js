@@ -41,6 +41,6 @@ function handleServerNotice(data) {
     io.sockets.in(service).emit('msg', data);
 }
 
-http.listen(process.env.PORT || 5000, function(){
-	console.log('Listening on *:' + process.env.PORT);
+http.listen(5000, function(){
+	console.log('Listening on *:5000');
 });
