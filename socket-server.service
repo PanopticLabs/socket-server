@@ -1,0 +1,11 @@
+[Unit]
+Description=socker-server
+
+[Service]
+ExecStart=/usr/local/bin/node /root/panoptic/socket-server/server.js
+Restart=always
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
