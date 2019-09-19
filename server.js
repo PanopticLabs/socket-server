@@ -15,12 +15,15 @@ app.enable('trust proxy');
 
 app.post('/', function(req, res) {
     console.log(req.ip);
-    if(req.ip == '127.0.0.1') {
+    if(req.ip == '::ffff:165.227.32.248') {
+        console.log('Post accepted')
         if(req.method == 'POST') {
     			var content = req.body;
           //console.log(content);
     			handleServerNotice(content);
         }
+    } else {
+      console.log('Post failed')
     }
     res.end('ok');
 });
